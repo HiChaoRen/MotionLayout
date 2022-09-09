@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolBarView"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <View
+                android:id="@+id/bgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff00C777" />
+
+            <androidx.constraintlayout.motion.widget.MotionLayout
+                android:id="@+id/toolContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                app:layoutDescription="@xml/scene_demo2">
+
+                <LinearLayout
+                    android:id="@+id/cityLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/cityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:maxEms="5"
+                        android:maxLines="1"
+                        android:text="苏州相城区"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"
+                        app:drawableRightCompat="@mipmap/new_home_arrow_ic" />
+
+                    <TextView
+                        android:id="@+id/weatherText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:maxEms="6"
+                        android:maxLines="1"
+                        android:text="雷阵雨"
+                        android:textColor="@android:color/white"
+                        android:textSize="11sp"
+                        tools:visibility="visible" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/carHailingIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_tool_bar_car_hailing_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/trainIcon"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/trainIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_tool_bar_train_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/busIcon"
+                    app:layout_constraintStart_toEndOf="@id/carHailingIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/busIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_tool_bar_bus_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/backTopIcon"
+                    app:layout_constraintStart_toEndOf="@id/trainIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/backTopIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/home_back_top_ic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/busIcon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.example.motionlayout.demo.HomeSearchView
+                    android:id="@+id/homeSearchView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cityLayout"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.motion.widget.MotionLayout>
+
+        </RelativeLayout>
+
+        <com.example.motionlayout.demo.StateKnowNestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="#ff00C777" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@color/design_default_color_secondary" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="550dp"
+                    android:background="@color/purple_200" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1000dp" />
+
+            </LinearLayout>
+
+        </com.example.motionlayout.demo.StateKnowNestedScrollView>
+
+    </LinearLayout>
+</layout>

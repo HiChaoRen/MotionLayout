@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="5000"
+        motion:motionInterpolator="easeInOut">
+
+        <OnClick
+            motion:clickAction="toggle"
+            motion:targetId="@+id/imageView" />
+
+
+        <KeyFrameSet>
+
+            <KeyPosition
+                motion:framePosition="25"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/imageView"
+                motion:pathMotionArc="startHorizontal"
+                motion:percentX="0.75"
+                motion:percentY="0.75" />
+
+            <KeyPosition
+                motion:framePosition="75"
+                motion:keyPositionType="parentRelative"
+                motion:motionTarget="@+id/imageView"
+                motion:percentX="0.25"
+                motion:percentY="0.25" />
+
+            <KeyTrigger
+                motion:motionTarget="@+id/imageView"
+                motion:framePosition="25"
+                motion:onNegativeCross="revertImage"/>
+
+            <KeyTrigger
+                motion:motionTarget="@+id/imageView"
+                motion:framePosition="25"
+                motion:onPositiveCross="changeImage"/>
+
+            <KeyTrigger
+                motion:motionTarget="@+id/imageView"
+                motion:framePosition="75"
+                motion:onPositiveCross="revertImage"/>
+
+            <KeyTrigger
+                motion:motionTarget="@+id/imageView"
+                motion:framePosition="75"
+                motion:onNegativeCross="changeImage"/>
+
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/imageView">
+
+            <Layout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintStart_toStartOf="parent" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/imageView">
+
+            <Layout
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent" />
+        </Constraint>
+
+    </ConstraintSet>
+
+</MotionScene>

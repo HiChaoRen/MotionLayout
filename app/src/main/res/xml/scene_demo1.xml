@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+    <ConstraintSet android:id="@+id/firstFloor">
+
+        <Constraint android:id="@+id/firstFloorView">
+
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintBottom_toBottomOf="parent" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/secondFloorView">
+
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toBottomOf="parent" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/thirdFloorView">
+
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toBottomOf="parent" />
+
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/secondFloor">
+
+        <Constraint android:id="@+id/firstFloorView">
+
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintBottom_toBottomOf="parent" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/secondFloorView">
+
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="0" />
+
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/thirdFloorView">
+
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toBottomOf="parent" />
+
+        </Constraint>
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/thirdFloor">
+
+        <Constraint android:id="@+id/firstFloorView">
+
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+
+            <Layout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintBottom_toBottomOf="parent" />
+
+        </Constraint>
+
+        <Constraint android:id="@+id/secondFloorView">
+
+            <CustomAttribute
+                motion:attributeName="Crossfade"
+                motion:customFloatValue="1" />
+
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent" />
+        </Constraint>
+
+        <Constraint android:id="@+id/thirdFloorView">
+
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/pay_half_screen_height"
+                motion:layout_constraintBottom_toBottomOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintStart_toStartOf="parent" />
+
+        </Constraint>
+
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/firstFloorTransition"
+        motion:constraintSetEnd="@+id/secondFloor"
+        motion:constraintSetStart="@+id/firstFloor"
+        motion:duration="300"
+        motion:motionInterpolator="easeInOut">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="0"
+                motion:motionTarget="@id/firstFloorView" />
+
+            <KeyAttribute
+                android:scaleX="1"
+                android:translationY="-7dp"
+                motion:framePosition="70"
+                motion:motionTarget="@id/firstFloorView" />
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/firstFloorView" />
+
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="0"
+                motion:motionTarget="@id/mainPageView" />
+
+            <KeyAttribute
+                android:scaleX="1"
+                android:translationY="-7dp"
+                motion:framePosition="70"
+                motion:motionTarget="@id/mainPageView" />
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/mainPageView" />
+
+        </KeyFrameSet>
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:dragScale="1.5"
+            motion:maxAcceleration="10"
+            motion:touchAnchorId="@id/secondFloorDragAreaView"
+            motion:touchAnchorSide="bottom"
+            motion:touchRegionId="@id/secondFloorDragAreaView" />
+
+    </Transition>
+
+    <Transition
+        android:id="@+id/secondFloorTransition"
+        motion:constraintSetEnd="@+id/thirdFloor"
+        motion:constraintSetStart="@+id/secondFloor"
+        motion:duration="300"
+        motion:motionInterpolator="easeInOut">
+
+        <KeyFrameSet>
+            <!--  第一层   -->
+            <KeyAttribute
+                android:scaleX="0.91"
+                android:translationY="-10dp"
+                motion:framePosition="0"
+                motion:motionTarget="@id/firstFloorView" />
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                android:translationY="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/firstFloorView" />
+
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                android:translationY="-10dp"
+                motion:framePosition="0"
+                motion:motionTarget="@id/mainPageView" />
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                android:translationY="10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/mainPageView" />
+
+            <!--  第二层 -->
+
+            <KeyAttribute
+                android:scaleX="1"
+                android:translationY="-7dp"
+                motion:framePosition="70"
+                motion:motionTarget="@id/secondFloorView" />
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                android:translationY="-10dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/secondFloorView" />
+
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="70"
+                motion:motionTarget="@id/secondFloorDragAreaView" />
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                motion:framePosition="100"
+                motion:motionTarget="@id/secondFloorDragAreaView" />
+
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="70"
+                motion:motionTarget="@id/secondFloorContainer" />
+
+            <KeyAttribute
+                android:scaleX="0.91"
+                motion:framePosition="100"
+                motion:motionTarget="@id/secondFloorContainer" />
+
+        </KeyFrameSet>
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:dragScale="1.5"
+            motion:maxAcceleration="10"
+            motion:touchAnchorId="@id/thirdFloorDragAreaView"
+            motion:touchAnchorSide="bottom"
+            motion:touchRegionId="@id/thirdFloorDragAreaView" />
+
+    </Transition>
+
+</MotionScene>

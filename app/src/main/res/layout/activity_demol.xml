@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:background="#ffff5028">
+
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/motionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            app:motionDebug="SHOW_ALL"
+            app:layoutDescription="@xml/scene_demo1">
+
+            <!-- 第一层底部弹出View-->
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/firstFloorView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pay_half_screen_shape_white_bg"
+                app:altSrc="@drawable/pay_half_screen_shape_grey_bg" />
+
+            <TextView
+                android:id="@+id/mainPageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="First Page"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/firstFloorView"
+                app:layout_constraintEnd_toEndOf="@id/firstFloorView"
+                app:layout_constraintStart_toStartOf="@id/firstFloorView"
+                app:layout_constraintTop_toTopOf="@id/firstFloorView" />
+
+            <!-- 第二层底部弹出View-->
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/secondFloorView"
+                android:layout_width="0dp"
+                android:layout_height="470dp"
+                android:src="@drawable/pay_half_screen_shape_white_bg"
+                app:altSrc="@drawable/pay_half_screen_shape_grey_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.example.motionlayout.demo.BottomDragAreaView
+                android:id="@+id/secondFloorDragAreaView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/secondFloorView"
+                app:layout_constraintStart_toStartOf="@id/secondFloorView"
+                app:layout_constraintTop_toTopOf="@id/secondFloorView"
+                tools:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/secondFloorContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Second Page"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/secondFloorView"
+                app:layout_constraintEnd_toEndOf="@id/secondFloorView"
+                app:layout_constraintStart_toStartOf="@id/secondFloorView"
+                app:layout_constraintTop_toBottomOf="@id/secondFloorDragAreaView" />
+
+            <!-- 第三层底部弹出View-->
+
+            <View
+                android:id="@+id/thirdFloorView"
+                android:layout_width="0dp"
+                android:layout_height="470dp"
+                android:background="@drawable/pay_half_screen_shape_white_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.example.motionlayout.demo.BottomDragAreaView
+                android:id="@+id/thirdFloorDragAreaView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/thirdFloorView"
+                app:layout_constraintStart_toStartOf="@id/thirdFloorView"
+                app:layout_constraintTop_toTopOf="@id/thirdFloorView"
+                tools:layout_height="100dp" />
+
+            <TextView
+                android:id="@+id/thirdFloorContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Third Page"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/thirdFloorView"
+                app:layout_constraintEnd_toEndOf="@id/thirdFloorView"
+                app:layout_constraintStart_toStartOf="@id/thirdFloorView"
+                app:layout_constraintTop_toBottomOf="@id/thirdFloorDragAreaView" />
+
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    </FrameLayout>
+</layout>
