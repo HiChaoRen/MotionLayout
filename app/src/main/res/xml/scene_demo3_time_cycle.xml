@@ -16,21 +16,30 @@
         <KeyFrameSet>
 
             <KeyTimeCycle
-                android:scaleX="0.3"
-                android:scaleY="0.3"
-                motion:framePosition="20"
+                android:scaleX="0"
+                android:scaleY="0"
+                motion:framePosition="0"
                 motion:motionTarget="@+id/myImageView"
                 motion:waveOffset="1"
                 motion:wavePeriod="0"
                 motion:waveShape="sin" />
 
             <KeyTimeCycle
-                android:scaleX="0"
+                android:scaleX="0.3"
                 android:scaleY="0.3"
+                motion:waveOffset="1"
+                motion:wavePeriod="2"
+                motion:waveShape="sin"
+                motion:framePosition="20"
+                motion:motionTarget="@+id/myImageView" />
+
+            <KeyTimeCycle
+                android:scaleX="0"
+                android:scaleY="0"
                 motion:framePosition="100"
                 motion:motionTarget="@+id/myImageView"
                 motion:waveOffset="1"
-                motion:wavePeriod="3"
+                motion:wavePeriod="0"
                 motion:waveShape="sin" />
 
         </KeyFrameSet>

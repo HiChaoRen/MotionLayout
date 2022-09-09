@@ -10,7 +10,7 @@
 
         <OnClick
             motion:clickAction="toggle"
-            motion:targetId="@+id/imageView" />
+            motion:targetId="@+id/myImageView" />
 
 
         <KeyFrameSet>
@@ -18,28 +18,28 @@
             <!--            <KeyPosition-->
             <!--                motion:framePosition="25"-->
             <!--                motion:keyPositionType="parentRelative"-->
-            <!--                motion:motionTarget="@+id/imageView"-->
+            <!--                motion:motionTarget="@+id/myImageView"-->
             <!--                motion:percentX="0.75"-->
             <!--                motion:percentY="0.75" />-->
 
             <!--            <KeyPosition-->
             <!--                motion:framePosition="75"-->
             <!--                motion:keyPositionType="parentRelative"-->
-            <!--                motion:motionTarget="@+id/imageView"-->
+            <!--                motion:motionTarget="@+id/myImageView"-->
             <!--                motion:percentX="0.25"-->
             <!--                motion:percentY="0.25" />-->
 
             <!--            <KeyPosition-->
             <!--                motion:framePosition="25"-->
             <!--                motion:keyPositionType="deltaRelative"-->
-            <!--                motion:motionTarget="@+id/imageView"-->
+            <!--                motion:motionTarget="@+id/myImageView"-->
             <!--                motion:percentX="0.75"-->
             <!--                motion:percentY="0.25" />-->
 
             <!--            <KeyPosition-->
             <!--                motion:framePosition="75"-->
             <!--                motion:keyPositionType="deltaRelative"-->
-            <!--                motion:motionTarget="@+id/imageView"-->
+            <!--                motion:motionTarget="@+id/myImageView"-->
             <!--                motion:percentX="0.25"-->
             <!--                motion:percentY="0.75" />-->
 
@@ -47,13 +47,13 @@
             <!--                motion:keyPositionType="pathRelative"-->
             <!--                motion:percentY="0.2"-->
             <!--                motion:framePosition="25"-->
-            <!--                motion:motionTarget="@+id/imageView"/>-->
+            <!--                motion:motionTarget="@+id/myImageView"/>-->
 
             <!--            <KeyPosition-->
             <!--                motion:keyPositionType="pathRelative"-->
             <!--                motion:percentY="-0.2"-->
             <!--                motion:framePosition="75"-->
-            <!--                motion:motionTarget="@+id/imageView"/>-->
+            <!--                motion:motionTarget="@+id/myImageView"/>-->
 
 
         </KeyFrameSet>
@@ -61,7 +61,7 @@
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
-        <Constraint android:id="@+id/imageView">
+        <Constraint android:id="@+id/myImageView">
 
             <Layout
                 android:layout_width="64dp"
@@ -73,7 +73,7 @@
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
-        <Constraint android:id="@+id/imageView">
+        <Constraint android:id="@+id/myImageView">
 
             <Layout
                 android:layout_width="64dp"
