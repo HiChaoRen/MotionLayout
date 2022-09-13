@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <FrameLayout
             android:id="@+id/toolBarView"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize">
@@ -45,7 +45,7 @@
                         android:ellipsize="end"
                         android:maxEms="5"
                         android:maxLines="1"
-                        android:text="苏州相城区"
+                        android:text="苏州"
                         android:textColor="@android:color/white"
                         android:textSize="14sp"
                         app:drawableRightCompat="@mipmap/new_home_arrow_ic" />
@@ -121,7 +121,7 @@
 
             </androidx.constraintlayout.motion.widget.MotionLayout>
 
-        </RelativeLayout>
+        </FrameLayout>
 
         <com.example.motionlayout.demo.StateKnowNestedScrollView
             android:id="@+id/nestedScrollView"

@@ -19,7 +19,10 @@ class DemoActivity2 : AppCompatActivity() {
                 if (distance <= 0) {
                     distance = 0f
                 }
-                val progress = distance / (scrollY * 4)
+                var progress = distance / (scrollY * 4)
+                if (progress >=1){
+                    progress =1f
+                }
                 binding.toolContent.progress = progress
             }
 
