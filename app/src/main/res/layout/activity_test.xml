@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layoutDescription="@xml/scene_demo3_position"
+    app:layoutDescription="@xml/scene_test"
     app:showPaths="true"
     app:motionDebug="SHOW_ALL"
-    tools:context=".demo.DemoActivity3">
-
+    tools:context=".demo.TestActivity">
 
     <com.example.motionlayout.demo.MyImageView
         android:id="@+id/myImageView"
