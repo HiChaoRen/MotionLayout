@@ -29,7 +29,6 @@ class DemoActivityCarousel : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_demo_carousel)
         binding.carousel.setAdapter(object : Carousel.Adapter {
             override fun count(): Int {
                 return cardList.size

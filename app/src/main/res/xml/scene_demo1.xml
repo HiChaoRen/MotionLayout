@@ -157,31 +157,14 @@
                 motion:framePosition="100"
                 motion:motionTarget="@id/firstFloorView" />
 
-            <KeyAttribute
-                android:scaleX="1"
-                motion:framePosition="0"
-                motion:motionTarget="@id/mainPageView" />
-
-            <KeyAttribute
-                android:scaleX="1"
-                android:translationY="-7dp"
-                motion:framePosition="70"
-                motion:motionTarget="@id/mainPageView" />
-
-            <KeyAttribute
-                android:scaleX="0.91"
-                android:translationY="-10dp"
-                motion:framePosition="100"
-                motion:motionTarget="@id/mainPageView" />
 
         </KeyFrameSet>
 
         <OnSwipe
-            motion:dragDirection="dragUp"
+            motion:dragDirection="dragDown"
             motion:dragScale="1.5"
             motion:maxAcceleration="10"
             motion:touchAnchorId="@id/secondFloorDragAreaView"
-            motion:touchAnchorSide="bottom"
             motion:touchRegionId="@id/secondFloorDragAreaView" />
 
     </Transition>
@@ -207,20 +190,13 @@
                 motion:framePosition="100"
                 motion:motionTarget="@id/firstFloorView" />
 
-
-            <KeyAttribute
-                android:scaleX="0.91"
-                android:translationY="-10dp"
-                motion:framePosition="0"
-                motion:motionTarget="@id/mainPageView" />
-
-            <KeyAttribute
-                android:scaleX="0.91"
-                android:translationY="10dp"
-                motion:framePosition="100"
-                motion:motionTarget="@id/mainPageView" />
-
             <!--  第二层 -->
+
+            <KeyAttribute
+                android:scaleX="1"
+                motion:framePosition="0"
+                android:translationY="0dp"
+                motion:motionTarget="@id/secondFloorView" />
 
             <KeyAttribute
                 android:scaleX="1"
@@ -244,24 +220,13 @@
                 motion:framePosition="100"
                 motion:motionTarget="@id/secondFloorDragAreaView" />
 
-            <KeyAttribute
-                android:scaleX="1"
-                motion:framePosition="70"
-                motion:motionTarget="@id/secondFloorContainer" />
-
-            <KeyAttribute
-                android:scaleX="0.91"
-                motion:framePosition="100"
-                motion:motionTarget="@id/secondFloorContainer" />
-
         </KeyFrameSet>
 
         <OnSwipe
-            motion:dragDirection="dragUp"
+            motion:dragDirection="dragDown"
             motion:dragScale="1.5"
             motion:maxAcceleration="10"
             motion:touchAnchorId="@id/thirdFloorDragAreaView"
-            motion:touchAnchorSide="bottom"
             motion:touchRegionId="@id/thirdFloorDragAreaView" />
 
     </Transition>

@@ -12,7 +12,6 @@
             motion:clickAction="toggle"
             motion:targetId="@+id/myImageView" />
 
-
         <KeyFrameSet>
 
             <!--            <KeyPosition-->
@@ -61,6 +60,7 @@
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
+
         <Constraint android:id="@+id/myImageView">
 
             <Layout
@@ -68,11 +68,13 @@
                 android:layout_height="64dp"
                 motion:layout_constraintBottom_toBottomOf="parent"
                 motion:layout_constraintStart_toStartOf="parent" />
+
         </Constraint>
 
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
+
         <Constraint android:id="@+id/myImageView">
 
             <Layout
@@ -80,6 +82,7 @@
                 android:layout_height="64dp"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintTop_toTopOf="parent" />
+
         </Constraint>
 
     </ConstraintSet>
