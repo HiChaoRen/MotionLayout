@@ -43,5 +43,14 @@ class DemoActivityCarousel : AppCompatActivity() {
             override fun onNewItem(index: Int) {
             }
         })
+        binding.button.setOnClickListener {
+            val count = binding.carousel.count
+            val lastIndex = count -1
+            if (binding.carousel.currentIndex == 0){
+                binding.carousel.jumpToIndex(lastIndex)
+            }else{
+                binding.carousel.jumpToIndex(0)
+            }
+        }
     }
 }
