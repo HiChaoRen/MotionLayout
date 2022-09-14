@@ -20,7 +20,7 @@
                 android:background="#ff00C777" />
 
             <androidx.constraintlayout.motion.widget.MotionLayout
-                android:id="@+id/toolContent"
+                android:id="@+id/motionLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingLeft="10dp"

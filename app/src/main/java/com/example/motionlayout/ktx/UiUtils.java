@@ -1,4 +1,4 @@
-package com.example.motionlayout;
+package com.example.motionlayout.ktx;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
