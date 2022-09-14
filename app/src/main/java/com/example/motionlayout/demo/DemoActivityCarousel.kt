@@ -47,9 +47,9 @@ class DemoActivityCarousel : AppCompatActivity() {
             val count = binding.carousel.count
             val lastIndex = count -1
             if (binding.carousel.currentIndex == 0){
-                binding.carousel.jumpToIndex(lastIndex)
+                binding.carousel.transitionToIndex(lastIndex,200)
             }else{
-                binding.carousel.jumpToIndex(0)
+                binding.carousel.transitionToIndex(0,200)
             }
         }
     }
