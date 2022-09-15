@@ -10,7 +10,7 @@
 
         <OnClick
             motion:clickAction="toggle"
-            motion:targetId="@+id/myImageView" />
+            motion:targetId="@+id/myImageView1" />
 
     </Transition>
 
