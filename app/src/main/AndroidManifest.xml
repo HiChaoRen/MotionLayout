@@ -21,6 +21,7 @@
             android:name=".demo.DemoActivity2"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".demo.DemoActivity3"/>
         <activity
             android:name=".demo.DemoActivity1"
             android:exported="false"

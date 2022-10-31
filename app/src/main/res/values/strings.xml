@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MotionLayout</string>
+
+    <string name="assistant_flight_check_in_title">值机柜台</string>
+    <string name="assistant_flight_boarding_port_title">登机口</string>
+    <string name="assistant_flight_baggage_carousel_title">行李转盘</string>
 </resources>

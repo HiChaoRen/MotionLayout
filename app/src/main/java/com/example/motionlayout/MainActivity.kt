@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.motionlayout.databinding.ActivityMainBinding
-import com.example.motionlayout.demo.DemoActivity1
-import com.example.motionlayout.demo.DemoActivity2
-import com.example.motionlayout.demo.TestActivity
-import com.example.motionlayout.demo.DemoActivityCarousel
+import com.example.motionlayout.demo.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.demoBtn2.setOnClickListener {
             startActivity(Intent(this, DemoActivity2::class.java))
+        }
+
+        binding.demoBtn3.setOnClickListener {
+            startActivity(Intent(this, DemoActivity3::class.java))
         }
 
         binding.demoBtn4.setOnClickListener {
